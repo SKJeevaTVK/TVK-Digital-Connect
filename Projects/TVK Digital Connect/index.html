@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TVK Digital Connect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         PAGE 1: MAIN WEBSITE (FIRST TIME ONLY)
+    ====================================== -->
+    <main id="mainWebsite" class="page">
+        <div class="content-box">
+            <h1>WELCOME TO<br>TVK DIGITAL CONNECT</h1>
+            <p>Digital Connect தளத்திற்கு உங்களை அன்புடன் வரவேற்கிறோம்.</p>
+            <button id="startBtn" class="btn">தொடங்குக (Next)</button>
+        </div>
+    </main>
+
+
+    <!-- =====================================
+         PAGE 2: INTRO SCREEN (FIRST TIME ONLY)
+    ====================================== -->
+    <section id="introScreen" class="page">
+
+        <!-- TOP TITLE -->
+        <div class="intro-title">
+            WELCOME TO<br><span>TVK DIGITAL CONNECT</span>
+        </div>
+
+        <!-- VIJAY MAIN IMAGE (BIGGER CIRCLE) -->
+        <div class="vijay-container">
+            <div class="vijay-border">
+                <img src="assets/images/vijay.jpg" alt="Thalapathy Vijay" class="vijay-image">
+            </div>
+        </div>
+
+        <!-- JEEVA PROFILE -->
+        <div class="jeeva-profile">
+            <div class="jeeva-photo-box">
+                <img src="assets/images/jeeva.jpg" alt="Jeeva" class="jeeva-image">
+            </div>
+            <div class="jeeva-info">
+                <div class="jeeva-name">JEEVA</div>
+                <div class="jeeva-fullname">K Jeevanandham</div>
+                <div class="jeeva-education">B.E (Computer Science)</div>
+            </div>
+        </div>
+
+        <!-- BOTTOM MESSAGE -->
+        <div class="intro-bottom">
+            <div class="loading-text">Preparing something amazing...</div>
+
+            <!-- Progress Bar -->
+            <div class="progress-wrapper">
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <span id="progressTime">00 / 00</span>
+            </div>
+        </div>
+
+        <!-- TVK TAMIL NAME -->
+        <div class="tvk-name">
+            <span>தமிழக வெற்றிக் கழகம்</span>
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         PAGE 3: NAVIGATION DASHBOARD (HOME PAGE)
+    ====================================== -->
+    <section id="thirdPage" class="page">
+        
+        <header class="app-header">
+            <div class="header-nav">
+                <button id="homeBtn" class="nav-btn">🏠 Home</button>
+            </div>
+            <div class="header-title">
+                <h2>TVK Connect</h2>
+            </div>
+            <div style="width: 70px;"></div> <!-- Alignment Spacer -->
+        </header>
+
+        <div class="dashboard-body">
+
+            <!-- Announcements -->
+            <div class="announcement-box">
+                <h3>🔔 முக்கிய அறிவிப்புகள்</h3>
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    மாவட்ட வாரியாக மக்கள் குறைதீர்ப்பு முகாம்கள் விரைவில் நடைபெறவுள்ளன. | அனைத்து வார்டுகளிலும் புதிய தொண்டர்கள் சேர்க்கை தீவிரம்!
+                </marquee>
+            </div>
+
+            <!-- Multi-Page Action Links Grid -->
+            <div class="action-grid">
+                
+                <a href="pages/dashboard.html" class="action-card">
+                    <div class="card-icon">📈</div>
+                    <h4>Dashboard</h4>
+                    <p>புள்ளிவிவரங்கள் மற்றும் விவரங்கள்</p>
+                </a>
+
+                <a href="pages/volunteer.html" class="action-card">
+                    <div class="card-icon">👥</div>
+                    <h4>Volunteer Register</h4>
+                    <p>களப்பணியாளராக இணையுங்கள்</p>
+                </a>
+
+                <a href="pages/issue.html" class="action-card">
+                    <div class="card-icon">📝</div>
+                    <h4>Report Public Issue</h4>
+                    <p>பிரச்சினையை பதிவிடுங்கள்</p>
+                </a>
+
+                <a href="pages/admin.html" class="action-card">
+                    <div class="card-icon">👤</div>
+                    <h4>Admin Panel</h4>
+                    <p>நிர்வாகி உள்நுழைவு</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="introMusic" src="assets/audio/tvk-song.mp3" preload="auto"></audio>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
