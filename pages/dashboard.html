@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard - TVK Digital Connect</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="app-page-header">
+        <a href="../index.html?skipIntro=true" class="nav-btn">🏠 Home</a>
+        <a href="../index.html?skipIntro=true" class="nav-btn">← Back</a>
+    </header>
+
+    <main class="page active-page sub-page-container">
+        
+        <div class="content-box" style="max-width: 600px; width: 95%;">
+            <h1>📈 TVK Connect Dashboard</h1>
+            <p>கட்சியின் தற்போதைய களப்பணிகள் மற்றும் புள்ளிவிவரங்களின் சுருக்கம்.</p>
+
+            <!-- Dynamic Stats Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin: 20px 0;">
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 15px 10px; border-radius: 10px; border: 1px solid rgba(241, 196, 15, 0.4);">
+                    <div id="countVolunteers" style="font-size: 1.5rem; font-weight: bold; color: #f1c40f;">12,450+</div>
+                    <div style="font-size: 0.75rem; color: #ddd; margin-top: 4px;">மொத்த தொண்டர்கள்</div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 15px 10px; border-radius: 10px; border: 1px solid rgba(241, 196, 15, 0.4);">
+                    <div id="countIssues" style="font-size: 1.5rem; font-weight: bold; color: #f1c40f;">1,280</div>
+                    <div style="font-size: 0.75rem; color: #ddd; margin-top: 4px;">பதிவான புகார்கள்</div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 15px 10px; border-radius: 10px; border: 1px solid rgba(241, 196, 15, 0.4);">
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #27ae60;">940</div>
+                    <div style="font-size: 0.75rem; color: #ddd; margin-top: 4px;">தீர்க்கப்பட்டவை</div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 15px 10px; border-radius: 10px; border: 1px solid rgba(241, 196, 15, 0.4);">
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #e74c3c;">340</div>
+                    <div style="font-size: 0.75rem; color: #ddd; margin-top: 4px;">பரிசீலனையில்...</div>
+                </div>
+
+            </div>
+
+            <!-- Recent Activity List -->
+            <div style="text-align: left; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="font-size: 0.95rem; color: #f1c40f; margin-bottom: 10px;">📌 சமீபத்திய நிகழ்வுகள்</h3>
+                <ul style="font-size: 0.8rem; color: #eee; list-style-type: none; display: flex; flex-direction: column; gap: 8px;">
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;">✅ சென்னை தெற்கு: புதிய தொண்டர்கள் சேர்க்கை முகாம் நிறைவடைந்தது.</li>
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px;">💧 மதுரை: குடிநீர் பிரச்சனை தொடர்பான புகார் ஆய்வு செய்யப்பட்டது.</li>
+                    <li>📢 திருச்சி: இளைஞரணி புதிய நிர்வாகிகள் தேர்வு அறிவிப்பு.</li>
+                </ul>
+            </div>
+
+            <a href="../index.html?skipIntro=true" style="display: inline-block; margin-top: 20px; color: #f1c40f; text-decoration: none; font-size: 0.9rem;">← முகப்புப் பக்கத்திற்குச் செல்ல</a>
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const volunteers = JSON.parse(localStorage.getItem('tvk_volunteers')) || [];
+            const issues = JSON.parse(localStorage.getItem('tvk_issues')) || [];
+
+            const totalVolunteers = 12450 + volunteers.length;
+            const totalIssues = 1280 + issues.length;
+
+            document.getElementById('countVolunteers').textContent = totalVolunteers.toLocaleString('ta-IN');
+            document.getElementById('countIssues').textContent = totalIssues.toLocaleString('ta-IN');
+        });
+    </script>
+</body>
+
+</html>
